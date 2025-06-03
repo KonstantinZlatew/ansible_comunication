@@ -1,0 +1,10 @@
+- name: Install htop on virtual machine
+  hosts: kali
+  vars:
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  tasks:
+    - name: Install htop
+      become: true
+      apt:
+        name: htop
+        state: present

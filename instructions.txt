@@ -1,0 +1,6 @@
+- Зареждане на .env файла чрез Ansible:
+export $(cat .env | xargs)
+ansible-playbook -i inventory.yaml playbook.yaml
+
+- Зареждане на playbook.yaml и inventory.yaml
+ansible-playbook -i inventory.yaml playbook.yaml
